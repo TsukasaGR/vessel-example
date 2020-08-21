@@ -31,7 +31,7 @@ class PhpCsFixer extends Command
     }
 
     /**
-     * Execute the console command.
+     * Execute the console command. test
      *
      * @return void
      */
