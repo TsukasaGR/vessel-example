@@ -381,7 +381,14 @@ if [ $# -gt 0 ]; then
         $COMPOSE exec \
             -u vessel \
             app \
-            ./vendor/bin/phpstan analyse --memory-limit=2G
+            php artisan analyse
+
+    elif [ "$1" == "fix" ]; then
+        shift 1
+        $COMPOSE exec \
+            -u vessel \
+            app \
+            php artisan fix
 
     # Else, pass-thru args to docker-compose
     else
