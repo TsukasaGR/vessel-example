@@ -29,6 +29,7 @@
     "lint-staged": {
         "*.php": [
             "vendor/bin/php-cs-fixer --config=.php_cs.dist fix ./app/",
+            "./vessel fix",
              "git add"
          ]
     }
