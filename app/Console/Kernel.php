@@ -13,7 +13,9 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\Phpstan::class
+        Commands\PhpStan::class,
+        Commands\PhpCsFixer::class,
+        Commands\PhpMd::class,
     ];
 
     /**
@@ -25,6 +27,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
+        $this->info($schedule); // PHPMDエラー回避のための暫定処理
     }
 
     /**

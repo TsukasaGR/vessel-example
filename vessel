@@ -390,6 +390,13 @@ if [ $# -gt 0 ]; then
             app \
             php artisan fix
 
+    elif [ "$1" == "md" ]; then
+        shift 1
+        $COMPOSE exec \
+            -u vessel \
+            app \
+            php artisan md
+
     # Else, pass-thru args to docker-compose
     else
         $COMPOSE "$@"

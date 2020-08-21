@@ -4,21 +4,21 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class PhpStan extends Command
+class PhpMd extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'analyse';
+    protected $signature = 'md';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'php stan\'s command';
+    protected $description = 'PHPMD\'s command';
 
     /**
      * Create a new command instance.
@@ -37,6 +37,6 @@ class PhpStan extends Command
      */
     public function handle()
     {
-        $this->info(shell_exec("./vendor/bin/phpstan analyse --memory-limit=2G"));
+        $this->info(shell_exec("./vendor/bin/phpmd ./app text phpmd.xml && ./vendor/bin/phpmd ./tests text phpmd.xml"));
     }
 }
