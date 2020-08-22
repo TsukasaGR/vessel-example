@@ -32,6 +32,7 @@ jobs:
     needs:  init
 
     steps:
+    - uses: init
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
@@ -44,6 +45,7 @@ jobs:
     needs:  init
 
     steps:
+    - uses: init
     - name: Execute lint via php-cs-fixer
       run: |
         ./vendor/bin/php-cs-fixer fix ./app/ --dry-run
