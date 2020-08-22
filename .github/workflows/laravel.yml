@@ -53,6 +53,6 @@ jobs:
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run |
+      run: |
         ./vendor/bin/php-cs-fixer fix ./app/ --dry-run
         ./vendor/bin/php-cs-fixer fix ./tests/ --dry-run
