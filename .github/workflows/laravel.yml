@@ -54,4 +54,5 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: ./vendor/bin/php-cs-fixer fix ./app/
+    - name: Execute lint via php-cs-fixer
       run: ./vendor/bin/php-cs-fixer fix ./tests/
