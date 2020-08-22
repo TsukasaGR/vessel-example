@@ -37,6 +37,6 @@ class PhpCsFixer extends Command
      */
     public function handle()
     {
-        $this->info(shell_exec("./vendor/bin/php-cs-fixer fix ./app/ && ./vendor/bin/php-cs-fixer fix ./tests/"));
+            $this->info(shell_exec("./vendor/bin/php-cs-fixer fix ./app/ && ./vendor/bin/php-cs-fixer fix ./tests/"));
     }
 }
