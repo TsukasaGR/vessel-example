@@ -83,7 +83,7 @@ jobs:
         ./vendor/bin/phpmd ./app text phpmd.xml
         ./vendor/bin/phpmd ./tests text phpmd.xml
 
-laravel-phpstan:
+  laravel-phpstan:
 
     runs-on: ubuntu-latest
 
