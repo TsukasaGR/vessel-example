@@ -13,24 +13,9 @@
     "devDependencies": {
         "axios": "^0.19",
         "cross-env": "^7.0",
-        "husky": "^4.2.5",
         "laravel-mix": "^5.0.1",
-        "lint-staged": "^10.2.11",
         "lodash": "^4.17.19",
         "resolve-url-loader": "^3.1.0",
         "sass": "^1.15.2",
         "sass-loader": "^8.0.0"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "*.php": [
-            "vendor/bin/php-cs-fixer --config=.php_cs.dist fix ./app/",
-            "./vessel fix",
-             "git add"
-         ]
-    }
 }
