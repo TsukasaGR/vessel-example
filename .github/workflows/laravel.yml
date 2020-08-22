@@ -49,10 +49,12 @@ jobs:
       run: |
         mkdir -p database
         touch database/database.sqlite
-    - name: Execute tests (Unit and Feature tests) via PHPUnit
+    - name: Execute lint via php-cs-fixer
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run: ./vendor/bin/php-cs-fixer fix ./app/
+      run |
+        ./vendor/bin/php-cs-fixer fix ./app/ --dry-run
+        ./vendor/bin/php-cs-fixer fix ./tests/ --dry-run
     - name: Execute lint via php-cs-fixer
-      run: ./vendor/bin/php-cs-fixer fix ./tests/
+      run:
