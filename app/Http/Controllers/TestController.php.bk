@@ -6,25 +6,36 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    /**
-     * Undocumented function
-     *
-     * @return int
-     */
-    public function func1()
-    {
-        return $this->subFunc1();
-    }
+//     public function func0() {
+//         \Log::debug(1);
+//                     \Log::debug(1);
+// \Log::debug(1);
+//                 \Log::debug(1);
+//     \Log::debug(1);
+//                             \Log::debug(1);
+//     \Log::debug(1);\Log::debug(1);
+//         return $this->subFunc1();
+//     }
 
-    /**
-     * Undocumented function
-     *
-     * @return string
-     */
-    private function subFunc1()
-    {
-        return '1';
-    }
+    // /**
+    //  * Undocumented function
+    //  *
+    //  * @return int
+    //  */
+    // public function func1()
+    // {
+    //     return $this->subFunc1();
+    // }
+
+    // /**
+    //  * Undocumented function
+    //  *
+    //  * @return string
+    //  */
+    // private function subFunc1()
+    // {
+    //     return '1';
+    // }
 
     public function func2()
     {
