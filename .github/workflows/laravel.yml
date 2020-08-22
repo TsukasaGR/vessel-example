@@ -56,5 +56,3 @@ jobs:
       run |
         ./vendor/bin/php-cs-fixer fix ./app/ --dry-run
         ./vendor/bin/php-cs-fixer fix ./tests/ --dry-run
-    - name: Execute lint via php-cs-fixer
-      run:
