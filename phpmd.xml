@@ -7,7 +7,16 @@
     <!-- 除外するルール -->
     <exclude name="StaticAccess" />
   </rule>
-  <rule ref="rulesets/codesize.xml" />
+  <rule ref="rulesets/codesize.xml">
+    <exclude name="CyclomaticComplexity" />
+  </rule>
+  <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+  <properties>
+    <property name="reportLevel" description="The Cyclomatic Complexity reporting threshold" value="5"/>
+    <property name="showClassesComplexity" description="Indicate if class average violation should be added to the report" value="true"/>
+    <property name="showMethodsComplexity" description="Indicate if class average violation should be added to the report" value="true"/>
+  </properties>
+  </rule>
   <rule ref="rulesets/controversial.xml" />
   <rule ref="rulesets/design.xml" />
   <rule ref="rulesets/unusedcode.xml" />
